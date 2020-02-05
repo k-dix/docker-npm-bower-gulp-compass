@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.10
 
 # Set env to detect if we are in a container, or not
 ENV CONTAINER=1
