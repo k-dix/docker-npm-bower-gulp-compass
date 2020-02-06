@@ -53,8 +53,8 @@ ENV JAVA_HOME $(dirname "$(readlink -f "$(which javac || which java)")")
 # Prepare Workdir
 RUN addgroup node
 RUN adduser -S node
-RUN mkdir /var/www
-RUN chown node:node /var/www
+RUN mkdir -p /var/www/node_modules
+RUN chown -R node:node /var/www
 RUN echo "node ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 RUN chmod 777 -R /var/log/
 
